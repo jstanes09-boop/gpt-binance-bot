@@ -1,0 +1,18 @@
+{
+  "features": [
+    {
+      "key": "adaptive_trailing_tp",
+      "description": "ATR/volatility-aware trailing TP",
+      "owner": "core",
+      "targets": [
+        "net_roi_30d",
+        "max_drawdown"
+      ],
+      "guardrails": {
+        "net_roi_30d_delta_min": 0.5,
+        "max_drawdown_delta_max": 1.0
+      },
+      "enabled": true
+    }
+  ]
+}

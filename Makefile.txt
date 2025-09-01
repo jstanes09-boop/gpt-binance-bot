@@ -1,0 +1,38 @@
+.PHONY: setup save smoke full baseline experiment report
+
+setup:
+	python -m pip install -r requirements.txt
+
+# one-button local zip backup
+save:
+	@mkdir -p backups
+	@python - <<'PY'
+import zipfile, os, datetime
+ts=datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+z=zipfile.ZipFile(f"backups/bot_{ts}.zip","w",zipfile.ZIP_DEFLATED)
+skip={"backups",".venv","__pycache__","artifacts","dist","reports",".git"}
+for root,dirs,files in os.walk("."):
+	dirs[:]=[d for d in dirs if d not in skip]
+	for f in files:
+		if any(s in os.path.join(root,f) for s in ("\\backups\\","\\__pycache__\\",".venv\\","\\artifacts\\","\\dist\\","\\reports\\",".git\\")): continue
+		z.write(os.path.join(root,f))
+z.close()
+print("Saved:", z.filename)
+PY
+
+smoke:
+	python scripts/smoke_backtest.py --days 7 --coins 25 --out artifacts/smoke.json
+
+full:
+	python scripts/full_backtest.py --config config/markets_top200.yaml --days 60 --out artifacts/full.json
+
+baseline:
+	python scripts/full_backtest.py --config config/markets_top200.yaml --days 60 --out artifacts/baseline.json
+
+experiment:
+	python experiments/run_experiment.py --feature $(FEATURE) --days 60 --out artifacts/exp_$(FEATURE).json && \
+	python experiments/compare_to_baseline.py --baseline artifacts/baseline.json --candidate artifacts/exp_$(FEATURE).json --thresholds config/thresholds.yaml --out artifacts/decision_$(FEATURE).json && \
+	python experiments/report.py --baseline artifacts/baseline.json --candidate artifacts/exp_$(FEATURE).json --decision artifacts/decision_$(FEATURE).json --html artifacts/report_$(FEATURE).html
+
+report:
+	python experiments/report.py --latest --html artifacts/latest_report.html

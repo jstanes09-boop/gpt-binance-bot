@@ -1,0 +1,25 @@
+name: vps-backup
+on:
+  workflow_run:
+    workflows: ["release-zip"]
+    types: [completed]
+jobs:
+  ship:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: gpt-bot-${{ github.event.workflow_run.head_sha }}
+          path: dist
+      - name: Install ssh client
+        run: sudo apt-get update && sudo apt-get install -y openssh-client
+      - name: Upload to VPS
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_KEY: ${{ secrets.VPS_KEY }}
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          echo "$VPS_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+          scp -o StrictHostKeyChecking=no dist/*.zip ${VPS_USER}@${VPS_HOST}:~/bot_backups/

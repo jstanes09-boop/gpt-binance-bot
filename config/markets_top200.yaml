@@ -1,0 +1,3 @@
+universe: USDT
+limit: 200
+exclusions: [BTTC, USTC, UNKNOWN]

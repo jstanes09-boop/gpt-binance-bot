@@ -1,0 +1,33 @@
+name: release-zip
+on:
+  push:
+    branches: [main]
+jobs:
+  build-zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make dist
+        run: |
+          mkdir -p dist
+          zip -r dist/gpt-bot-${{ github.sha }}.zip . -x ".git/*" ".venv/*" "__pycache__/*" "artifacts/*" "backups/*" "dist/*" "reports/*"
+      - uses: actions/upload-artifact@v4
+        with: { name: gpt-bot-${{ github.sha }}, path: dist/*.zip }
+
+  tag-and-release:
+    needs: build-zip
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { name: gpt-bot-${{ github.sha }}, path: dist }
+      - name: Compute version
+        id: ver
+        run: echo "ver=v1.$(date +%Y%m%d).${GITHUB_RUN_NUMBER}" >> $GITHUB_OUTPUT
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.ver.outputs.ver }}
+          name: "Auto Release ${{ steps.ver.outputs.ver }}"
+          files: dist/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

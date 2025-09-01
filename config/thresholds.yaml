@@ -1,0 +1,8 @@
+required:
+  net_roi_30d_delta_min: 0.50
+  max_drawdown_delta_max: 1.00
+  win_rate_delta_min: 0.00
+  profit_factor_min: 1.15
+  trades_min: 50
+reporting:
+  confidence_threshold: 0.80
