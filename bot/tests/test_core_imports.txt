@@ -1,0 +1,7 @@
+def test_imports_and_symbols():
+    import bot.core.signals as s
+    import bot.core.executor as e
+    import bot.core.risk as r
+    assert hasattr(s, "generate_signals")
+    assert hasattr(e, "place_orders")
+    assert hasattr(r, "apply_risk")
