@@ -20,6 +20,7 @@
   ".github/workflows/vps-backup.yml": "94f810a75fe8b05a94da712a13943821119dd2fda0ece55e2254e9b274a6170a",
   "bot/main.py": "e040e4c6cf6d82f1ec878ec69cde731446f92a16db0952e6d7e6e2b7c7ae787f",
   "bot/__init__.py": "b35a46a8050a5bc3a2e2795049001b9f6ccddde47da42b5e354eca8512239527",
+  "bot/backtest/engine.py": "6802a6c9abaa68aa5f26d23550d417665702dcaa5fa2245b0aac1c53094760c1",
   "bot/core/executor.py": "f0848c1c566b72a5e25aafacd3573f3e0d45393b32f9262c1db4906bc0a43b2c",
   "bot/core/executor.py.bak": "f0848c1c566b72a5e25aafacd3573f3e0d45393b32f9262c1db4906bc0a43b2c",
   "bot/core/fees.py": "9087aac8656c829c3eaa988c71915d6802fe8efe915d1b69e9bba9e53281496f",
@@ -41,6 +42,7 @@
   "config/features.json": "be0838d79151b03f471590fede182718a5b9e35c8a6f84b5f3f8a8498212e548",
   "config/markets_top200.yaml": "b0f49b3df6cef8846872b756ebf6e4f6150bedba6835df07b0d0b003440d8c37",
   "config/thresholds.yaml": "3fc838e8dab2a46c62cdc0fb1a626154bbd464e7e887f669aca86b80273ee364",
+  "config/universe_demo.yaml": "75eead41611fbdcb60b79c1abecbbaf55bcbb959b197a16a603be9352ea150f7",
   "config/__init__.py": "c0bbbb5b6d776bd569a8ce1dde718a322055ae62b1c3b48f26826d6e8acdb651",
   "core/exchange_adapter.py": "f0dbedc751db3bb14c4cc7e1ecf6e8163f4346658bb45063419f91b02c4d3365",
   "core/executor.py": "5d39774475a22851a97e1750c518ae4e73ccce668299b250e874e3367cc32919",
@@ -49,6 +51,8 @@
   "core/risk.py": "0219cd4ce8b1def448b41230fdbd33944711e2343152774a85e2ab0f0267f40b",
   "core/signals.py": "27024ca05bb1e245a5a93dcc7866b9282da6bd88f94eb34999166bd67c575251",
   "core/__init__.py": "e5b3c6479b6a1ee642eb397ce5b9d20dce7a98e605c9095f67bddf984542f5aa",
+  "data/BTCUSDT_1h.csv": "382a7cf6476491c32615cdd57dc414a66ff5610aa1247324fd88a4fa431b6f03",
+  "data/ETHUSDT_1h.csv": "0b151f326e3ccd18ae20d9059d1afbf25936e357d3b3466a5864269b6db92753",
   "experiments/compare_to_baseline.py": "a5ea94df964d25ccdf139c809095536c794c115c744e121d75b1381283913900",
   "experiments/report.py": "adbdc41c5a9afa11d497a62a5b2d52ddb4d05839eb2c245ea3e354fc3b433c3d",
   "experiments/run_experiment.py": "1527c7269a649e8f7cf58f4873ed8048146a3abcc006d4f969a7fe0ddf4c3e43",
@@ -62,7 +66,7 @@
   "scripts/diagnostics.py": "fb040acc06c29c9ec474c1956f948b947b8a28fae9122351f12364e9d55e946f",
   "scripts/executor_demo.py": "0aee5b2c04f07116c02fe651cec1220de83820305561ffe190bf103a3c8563e3",
   "scripts/experiment.ps1": "32682639b785dc4c6ed727f2dc438e414c9b1dbd847fa9314e2a4a6b9e527f5f",
-  "scripts/full_backtest.py": "45f41149af14bb9d077d712e1481ee7c3401a36dd2b6b1a60ed1e6c6b496e368",
+  "scripts/full_backtest.py": "b7cb76970e890dfabbdc323499a0472c0c75af7b4759acc235d71cc5da1c0d51",
   "scripts/import_check.py": "d6cba90b617c0cc9142df91f089e14e6b3c31b409161ca568772947e27b5ec2b",
   "scripts/indicator_demo.py": "101f2ee51009835ee957f22d8717675ac75b9b5d20138212e54c67077d84f51a",
   "scripts/make_checksums.py": "00068e4c7e59df1e5301de2e7498c4fa59b03d8ffb9eed938ed9f0778b855bec",
@@ -73,6 +77,7 @@
   "scripts/run_bot.ps1": "7842ecefaef40d1ff908465b87906961b133aa5864095da5efaf8f38fd5f44c4",
   "scripts/run_tests.ps1": "f562e00f8d7868a736b61d3ca0f1bdd4944759b790ff727161d2ad273e9d219f",
   "scripts/save.ps1": "b18f3b216dfca260df3b4395f324a2544711d413a3960a9971e3ae49cf5be0dc",
+  "scripts/seed_demo_data.py": "9e58b05e14b652b4dfcabb9b16e156865dc6e144fbe5c9326c4b9537cd7dd585",
   "scripts/selfcheck.py": "dcbdd1d2bdb7fd5f8fb73aa1aa037439928262305307ee29a2b266bd6b8efe9c",
-  "scripts/smoke_backtest.py": "68391547746f3585891754e7ee6e9ac409549bdb8a68ddd5ccd67d5d8a94a39d"
+  "scripts/smoke_backtest.py": "b028841bb986554e7f94824e138084b7af7480d68e9ffbc29830b8e94cac0ee8"
 }
