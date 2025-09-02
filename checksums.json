@@ -1,7 +1,7 @@
 {
   ".editorconfig": "b35bc3d37b193c965542af24a5e3256bdfb6783b15fc05d2c02eafee1de8fdc0",
   ".env": "66f10d07e81e8c5d114ea5d3e070169d2778ba52c1d3df30151bf73499658760",
-  ".env.example": "66f10d07e81e8c5d114ea5d3e070169d2778ba52c1d3df30151bf73499658760",
+  ".env.example": "a77e1b8a93d8bc8f70990f9cedc992c837453dea98aea5051c83fa99f333d571",
   ".gitattributes": "2c482ebecd47ca37bee43a25e42e3f9d09980e204093c082c9003b804262bce6",
   ".gitignore": "4a0b3d487e9db0256a4f8be461280a529a322474dbb1523a99f51f891a875ec8",
   "baseline.ps1": "9caccf1565a40459a5a994b6598953e1a2b80ea8d056c1d7da05a951a84ab3f3",
@@ -11,7 +11,7 @@
   "Makefile.txt": "e942aa37917aa870d07e2e4c57d5db6c8e953246cac67cc856c6e8440df8ce94",
   "README-MIGRATION.txt": "f91b081c914f8053617e3ae0a7d5c7f20a02ace149ce278bd4a15cc7ed4db5d1",
   "README-RUNBOOK.txt": "2745aeda0131f361b8a33e84cd216918d0cd304448e42dd5b8d42f8df2122240",
-  "requirements.txt": "54973ac2479169c57930491f390ca3b04845d47b9b943a21142d1d3aeed1ee6a",
+  "requirements.txt": "825790896012d7915b3fe3ec1a20659ab367eed04c3fa67e1ffe79e64eb0a410",
   "verify_checksums.py": "132ae7e99bea8ccd255e24e20f30656b5fac1aceb7c7ed0fe8f1c8523c2c0391",
   "VERSION": "550613537fc488f3b372af74a4001879f012c8465b816f1b85c6d3446b2cfb49",
   ".github/pull_request_template.md": "1296f70ad5e85135577d953e4dc7785d6130d67b5f1d95019eb070fe51f08faf",
@@ -21,11 +21,13 @@
   "bot/main.py": "e040e4c6cf6d82f1ec878ec69cde731446f92a16db0952e6d7e6e2b7c7ae787f",
   "bot/__init__.py": "b35a46a8050a5bc3a2e2795049001b9f6ccddde47da42b5e354eca8512239527",
   "bot/backtest/engine.py": "6802a6c9abaa68aa5f26d23550d417665702dcaa5fa2245b0aac1c53094760c1",
+  "bot/core/exchange_adapter.py": "c4d2fed67bb140268c8db98963863c1afbe46cf3b2968f12bcbc45880a77c254",
   "bot/core/executor.py": "f0848c1c566b72a5e25aafacd3573f3e0d45393b32f9262c1db4906bc0a43b2c",
   "bot/core/executor.py.bak": "f0848c1c566b72a5e25aafacd3573f3e0d45393b32f9262c1db4906bc0a43b2c",
   "bot/core/fees.py": "9087aac8656c829c3eaa988c71915d6802fe8efe915d1b69e9bba9e53281496f",
   "bot/core/fees.py.bak": "9087aac8656c829c3eaa988c71915d6802fe8efe915d1b69e9bba9e53281496f",
   "bot/core/indicators.py": "a583d84a6d9cab3013430820af99c17a9baa002fa05a9d4ec74ad00ae890f6aa",
+  "bot/core/models.py": "5d5ea8e826f9ef4c723cfc984cc5ab186c47c229b99a2fbc0e2243d223e18635",
   "bot/core/portfolio.py": "77e7d9c4e90e52174fbecae869a3fe002db5359718c68baef3f91d588242a652",
   "bot/core/risk.py": "3dba11b59bbf1ab0d61a5d96c1b680463eca45be192399f5910393fe71e7192b",
   "bot/core/risk.py.bak": "3dba11b59bbf1ab0d61a5d96c1b680463eca45be192399f5910393fe71e7192b",
@@ -79,5 +81,7 @@
   "scripts/save.ps1": "b18f3b216dfca260df3b4395f324a2544711d413a3960a9971e3ae49cf5be0dc",
   "scripts/seed_demo_data.py": "9e58b05e14b652b4dfcabb9b16e156865dc6e144fbe5c9326c4b9537cd7dd585",
   "scripts/selfcheck.py": "dcbdd1d2bdb7fd5f8fb73aa1aa037439928262305307ee29a2b266bd6b8efe9c",
-  "scripts/smoke_backtest.py": "b028841bb986554e7f94824e138084b7af7480d68e9ffbc29830b8e94cac0ee8"
+  "scripts/smoke_backtest.py": "b028841bb986554e7f94824e138084b7af7480d68e9ffbc29830b8e94cac0ee8",
+  "scripts/trade_once.py": "3ad6b4f3578343e1e48875be5c3e274959a52b70dbf2fb315a51f36627e64ebb",
+  "scripts/watch_signals_loop.py": "8cf492ed4871bc838a7cc01d43bf6ae2472c3e93be6f13d56bbe33284439f2ee"
 }
