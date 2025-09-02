@@ -59,7 +59,7 @@
   "scripts/diagnostics.py": "fb040acc06c29c9ec474c1956f948b947b8a28fae9122351f12364e9d55e946f",
   "scripts/experiment.ps1": "32682639b785dc4c6ed727f2dc438e414c9b1dbd847fa9314e2a4a6b9e527f5f",
   "scripts/full_backtest.py": "45f41149af14bb9d077d712e1481ee7c3401a36dd2b6b1a60ed1e6c6b496e368",
-  "scripts/import_check.py": "c6cbe81800ed5356f374f6b4d5b5e11eecfcdad5a62885c710b09a80cb369c3a",
+  "scripts/import_check.py": "d6cba90b617c0cc9142df91f089e14e6b3c31b409161ca568772947e27b5ec2b",
   "scripts/indicator_demo.py": "101f2ee51009835ee957f22d8717675ac75b9b5d20138212e54c67077d84f51a",
   "scripts/make_checksums.py": "00068e4c7e59df1e5301de2e7498c4fa59b03d8ffb9eed938ed9f0778b855bec",
   "scripts/migrate_from_archive.ps1": "be00fc2a0ae45b4e85f3439149661f17c47150cd7deffa2fa781111ed84ec344",
